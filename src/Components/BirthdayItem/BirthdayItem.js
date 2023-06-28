@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Button = styled.button`
-     background-color: transparent;
+    background-color: transparent;
     font-size: 20px;
     width: 50%;
     border: 1px solid;
@@ -21,6 +21,8 @@ const Button = styled.button`
 
 const CardStyle = styled.div `
     
+    display: flex;
+    flex-direction: column;
     border: 2px;
     border-radius: 15px;
     text-align: center;
