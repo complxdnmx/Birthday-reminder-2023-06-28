@@ -21,9 +21,9 @@ const BirthdayForm = ( {onNewTask} ) => {
 
         const day = date.getDate().toString().padStart(2,'0')
         const month = (date.getMonth() + 1).toString().padStart(2,'0')
-        const year = date.getFullYear()
-        const birthdayDateYears = birthdayDate.toString().slice(0,4)
-        const age = Number(year) - Number(birthdayDateYears) + 1
+        const currentYear = date.getFullYear()
+        const birthdayDateYear = birthdayDate.toString().slice(0,4)
+        const age = Number(currentYear) - Number(birthdayDateYear) + 1
         
 
         const newBirthday = {
