@@ -1,5 +1,6 @@
 import React from "react";
 import BirthdayItem from "../BirthdayItem/BirthdayItem";
+import './BirthdayList.css'
 
 const BirthdayList = ( {data, onBirthdayDelete } ) => {
     
@@ -11,7 +12,6 @@ const BirthdayList = ( {data, onBirthdayDelete } ) => {
                 )}
             )}
         </div>
-
     )
 }
 

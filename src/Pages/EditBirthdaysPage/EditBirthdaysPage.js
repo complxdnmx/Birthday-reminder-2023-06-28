@@ -2,8 +2,13 @@ import { useState } from "react";
 import BirthdayForm from "../../Components/BirthdayForm/BirthdayForm";
 import BirthdayList from "../../Components/BirthdaysList/BirthdayList";
 import Container from "../../Components/Container/Container"
+import styled from "styled-components";
 
-console.clear()
+const Title = styled.h2 `
+    color: rgba(0, 100, 200, 1);
+    font-size: normal;
+    font-weight: 30
+`
 
 function EditBirthdays () {
 
@@ -47,11 +52,11 @@ function EditBirthdays () {
 
         <Container>
 
-            <h2>Create birthdays:</h2>
+            <Title>Create birthdays:</Title>
 
             <BirthdayForm onNewTask={createBirthdayHandler}/>
 
-            <h2>Upcomming birthdays:</h2>
+            <Title>Upcomming birthdays:</Title>
 
             <BirthdayList data={birthdays} onBirthdayDelete={deleteBirthdayHandler}/>
             

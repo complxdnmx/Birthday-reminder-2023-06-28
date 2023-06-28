@@ -1,8 +1,6 @@
 import { useState } from "react"
 import Container from "../../Components/Container/Container"
 
-
-
 function AllBirthdays () {
     return (
 

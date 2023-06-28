@@ -1,14 +1,10 @@
 import { Route, Routes, Link} from 'react-router-dom';
-
-
 import MainNavigation from './Components/Navigation/MainNavigation';
 import Container from "./Components/Container/Container"
 import EditBirthdays from './Pages/EditBirthdaysPage/EditBirthdaysPage';
 import AllBirthdays from './Pages/AllBirthdaysPage/AllBirthdaysPage';
 import HomePage from './Pages/HomePage/HomePage';
 import ThisMontPage from './Pages/ThisMonthPage/ThisMonthPage';
-
-
 
 
 function App() {
@@ -18,7 +14,6 @@ function App() {
         <MainNavigation></MainNavigation>   
       </Container>
       
-
       <Routes> 
         <Route path='/' element={<HomePage/>} />
         <Route path='/all-birthdays' element={<AllBirthdays/>} />
@@ -33,9 +28,6 @@ function App() {
         }/>
       </Routes>
 
-     
-
-     
     </div>
   );
 }
