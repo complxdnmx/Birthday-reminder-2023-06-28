@@ -1,5 +1,46 @@
 import { useState } from "react"
 import { v4 as uuid } from "uuid"
+import styled from "styled-components"
+
+const InputButton = styled.input`
+     background-color: transparent;
+    font-size: 20px;
+    border: 1px solid;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color:cadetblue;
+    margin-top:10px;
+    cursor: pointer;
+    transition: backround-color 0.7s, color 0.5s;
+    margin: 0px;
+
+    &:hover {
+        background-color: cadetblue;
+        color: white;
+        text-shadow: 1px 2px 2px rgba(128, 0, 0, 1);
+    }
+`
+
+const FormStyle = styled.div `
+    
+    display: flex;
+    flex-direction: row;
+    /* align-items: */
+    max-width: 50%;
+    border: 2px;
+    border-radius: 15px;
+    text-align: center;
+    gap: 20px;
+    padding: 15px;
+    background: transparent;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+`
+const Form = styled.form `
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+`
 
 
 
@@ -39,25 +80,25 @@ const BirthdayForm = ( {onNewTask} ) => {
     }
     
     return (
-        <form onSubmit={newBirthdayHandler}>
-            <div className='form-control'>
+        <Form  onSubmit={newBirthdayHandler}>
+            <FormStyle className='form-control'>
                 <label htmlFor='birthday-name'>Enter name:</label>
                 <input type='text' id='birthday-name' name='birthday-name' value={name
                 } onChange={nameInputHandler}/>
-            </div>
-            <div className='form-control'>
+            </FormStyle>
+            <FormStyle className='form-control'>
                 <label htmlFor='birthday-date'>Enter birthday date:</label>
                 <input type='date' id='birthday-date' name='birthday-date' value={birthdayDate} onChange={dateInputHandler}/>
-            </div>
-            <div className='form-control'>
-                <label htmlFor='birthday-gifts'>Enter gifts:</label>
+            </FormStyle>
+            <FormStyle className='form-control'>
+                <label htmlFor='birthday-gifts'>Enter gift ideas:</label>
                 <textarea id='birthday-gifts' name='birthday-gifts' value={gifts} onChange={giftsInputHandler}/>
-            </div>
+            </FormStyle>
             <div className='form-control'>
-                <input type='submit' id='birthday-submit' name='birthday-submit' value='New birthday'/>
+                <InputButton type='submit' id='birthday-submit' name='birthday-submit' value='New birthday'/>
             </div>
 
-        </form>
+        </Form>
     )
 }
 

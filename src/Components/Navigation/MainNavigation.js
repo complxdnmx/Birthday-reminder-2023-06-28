@@ -5,10 +5,10 @@ import './MainNavigation.css'
 function MainNavigation () {
     return (
         <nav className='main-nav'>
-            <ul className='nav-list'>
-                <li className='nav-item'>
+            <div className='nav-item'>
                     <NavLink to='/' className='nav-link'>Home</NavLink>
-                </li>
+                </div>
+            <ul className='nav-list'>
                 <li className='nav-item'>
                     <NavLink to='/this-month' className='nav-link'>This Month</NavLink>
                 </li>
