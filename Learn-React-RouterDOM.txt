@@ -1,0 +1,57 @@
+React Router DOM & routing:
+
+Routes registruojam nuo pacios pradzios "index.js" apgaubiam "App"
+
+1. Importuojam:
+
+import { BrowserRouter } from 'react-router-dom';
+
+2. Naudojam kaip kompomemta ir apgaubiam:
+
+<BrowserRouter>
+    <App />
+</BrowserRouter>
+
+arba pervadiname i Router kai importuojame
+
+3. Tada App.js registruojam routus:
+
+import { Routes } from 'react-router-dom';
+
+tarp skliaustekiu irasom Route vienaskaita, kuri norim registruot
+
+import { Routes, Route } from 'react-router-dom';
+
+tada:
+
+<Routes> 
+    <Route path='demo' element={<DemoIndexPage />} />     //nurodom path ir kas atvaizduojama puslapyje - element
+</Routes>
+
+dar viena pridet - taip pat tarp Routes:
+<Routes> 
+    <Route path='/demo' element={<DemoIndexPage />} />
+    <Route path='/contacts' element={<ContactUsPage />} />
+</Routes>
+
+4. Navigacijaj naudojam Link elementa (vietoj a, ir "to" vietoj href kad neperkraudinetu):
+
+<nav className='main-nav'>
+<ul className='nav-list'>
+    <li className='nav-item'>
+    <Link href='/' className='nav-link'>Home</Link>
+    </li>
+
+    <li className='nav-item'>
+    <Link href='/demo' className='nav-link'>Demo Page</Link>
+    </li>
+
+    <li className='nav-item'>
+    <Link href='/contacts' className='nav-link'>Contact Us</Link>
+    </li>
+
+</ul>
+</nav>
+
+5. NavLink navigacijai suteikia "active" atributa, tai navigacijai naudojam ji
+importinames lygiai taip pat per react router DOM

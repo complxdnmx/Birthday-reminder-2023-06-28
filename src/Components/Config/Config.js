@@ -1,0 +1,1 @@
+export const API_URL = 'http://locacalhost:3000'

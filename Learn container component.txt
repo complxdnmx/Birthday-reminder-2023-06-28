@@ -1,0 +1,38 @@
+1. Susikuriame Container komponenta, i kuri desime visa kita
+
+import Container from "../../Components/Container/Container";
+
+function ContactUsPage() {
+    return (
+        <Container>
+            <div className="content">
+                <ShopsList />
+                <ShopsMap />
+            </div>
+        </Container>
+    )
+}
+
+export default ContactUsPage;
+
+2. Per children propsa, kuris randasi container komponento viduje (viskas, kas yra komponento viduje yra children)
+
+function Container (props) {
+   return (
+    <div className="container">
+        {props.children}
+    </div>
+   ) 
+}
+
+export default Container
+
+
+3. Ir container galime naudoti visur tiek su Navigation tiek su Contact Us tiek su visais kitais 
+
+4. Container galime prideti prosa Classes pvz:
+
+<Container classes='custom-class'>
+
+ir per props issimti:
+props.classes

@@ -1,0 +1,100 @@
+runnint npm: npm start (bet turi buti my-react-app direktorjijoje/ten kur yra json file'as)
+baigt darba: ctrl+c
+
+pasileist json serveri:
+json-server --watch db.json (atskiram terminale)
+S + ender - kopija db (sukuria datos kopija)
+
+direcktorijos:
+./ - ta pati 
+/.. -laipteliu(folderiu) auksciau
+../../ - dviem folderiais auksciau
+
+
+node_modules - nelieciam, dependencies
+.gitignore - nurodo, kuriu fileu nesiusti i git repozitorija
+
+README.md - aprasymas projekto (skirtas projekto aprasymui)
+
+package.json - nuo jo prasideda appas, galima redaguot (pasikeist pavadinima, versija etc),
+jame yra dependencies, kuriame yra nurodyti extentions (esantys node module), dependencies turi kitus dependencies etc (chain)
+
+package-lock.json - susigeneruoja automatiskai ir yra neaktualus
+
+pagrindiniai, su kuriais dirbsim:
+
+- public (jame yra index.htm, nuo kurio prasideda puslapis)
+- scr ()
+
+public:
+
+svarbu: index.html - paprastas html, head ir body (svarbu body dalis)
+
+manifest.json - seo skirti etc
+robots.txt - puslapio readability ir skanavimui
+
+src: randasi visas musu puslapis/puslapio source
+index.js - pradinis file, i kuri importuojame App.js
+index.css - 
+app.js - pagrindinis, kuriame dirbame ir cia yra musu single page application
+
+
+hierarchija: index.html - pagrindinis, index.js paselectina index.html esanti div id="root" ir sukuria reacta tame dive (ReactDOM.createRoot sucompiliuoja i ji koda)
+
+root.render metodas leidzia i js rasyt html (js kuris leidzia rasyt html yra jsx, reactas pats konvertuoja i js, tai rasom tiesiog htm)
+
+SYNTAX:
+sintaxe - jsx
+
+class yra rasomas className
+
+React.StrictMode - helperis ismeta papildomus ispejimus ir bugus, jei blogai rasome koda skirtas tik developinimui
+i React.StrictMode dedame save uzdaranti elementa <App /> (kuriame yra puslapis) (ji importuojame is App.js(import App from './App'))
+
+reacto komponentai prasideda didziaja raide App pvz.
+
+i App galima deti tik viena elementa, o jo viduje kiti (div viduje span pvz)
+
+{} riestinius naudojame tose vietose, kur norime ideti javascripta pvz img src={logo}
+logo importuojame virsuje
+
+label elemente rasom ne "for", o "htmlFor"
+
+rasome camelCase jsx
+react komponentai (including funkcijos - didziosiom: App pvz)
+
+JSX visi elementai turi tureti uzdarymo taga, arba save uzdaryt:
+pvz:
+
+<input>...</input> arba save uzdarantis <input... />
+
+jsx returninam tarp paprastu sklaiustu: return (turinys...div p etc)
+
+ATRIBUTES:
+
+(pvz shop items, kurie yra shop liste)
+
+Pridedame title attribute(padarome PROPSu):
+<ShopItem title="Parduotuve 1" />
+
+Accessiname PROPS paduodam i funkcija:
+
+function ShopItem(props)   props - yra reacto sintakse, turi buti butent toks
+ir atiduoda objekta
+
+propsuose galima deti viska, klases, conditions, rules etc. juos galima naudot kaip paruostukus
+susikurus propsa issitrauki funkcijos parametruose (), tai pvz: NewsWrapper(props) {}
+
+REACTE kai turim masyva su jsx komponentais[<h1>Bla</h1>, <h2>Blo</h2>, <p>lala<span>laba</span></p>],
+javascript kompiliuoja po kapotu ir atiduoda kaip html elementus
+
+tai masyva galima konvertuotis i jsx masyva su map, nes map formuluoja nauja masyva
+
+EVENT LISTENERIAI
+
+arrow funkcijoje nereikia returnint, nes tik viena grazina
+kad neperkrautu puslapip event.preventDefault() on submit
+
+TOASTIFY: npm install --save react-toastify
+
+

@@ -1,0 +1,10 @@
+{
+  "birthdays": [
+    {
+      "id": 1,
+      "birthdayDate": "1990-06-13",
+      "name": "Max",
+      "gifts": "Max loves music"
+    }
+  ]
+}
