@@ -12,7 +12,6 @@ const BirthdayList = ( {data, onBirthdayDelete } ) => {
                 )}
             )}
         </div>
-
     )
 }
 

@@ -5,7 +5,6 @@ function HomePage () {
         <Container>
             <h2>Home page here with 4 upcomming birthdays</h2>
         </Container>
-
     )
 }
 

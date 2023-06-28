@@ -7,15 +7,8 @@ import styled from "styled-components";
 const Title = styled.h2 `
     color: rgba(0, 100, 200, 1);
     font-size: normal;
-    font-weight: 300
-    
-    
-
-
-
+    font-weight: 30
 `
-
-console.clear()
 
 function EditBirthdays () {
 

@@ -42,15 +42,12 @@ const Form = styled.form `
     gap: 10px
 `
 
-
-
 const BirthdayForm = ( {onNewTask} ) => {
 
     const [name, setName] = useState('')
     const [gifts, setGifts] = useState('')
     const [birthdayDate, setBirthdayDate] = useState('')
     
-
     const nameInputHandler = (event) => setName(event.target.value)
     const giftsInputHandler = (event) => setGifts(event.target.value)      
     const dateInputHandler = (event) => setBirthdayDate(event.target.value)

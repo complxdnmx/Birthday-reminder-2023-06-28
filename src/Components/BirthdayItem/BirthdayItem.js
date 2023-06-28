@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
-
 const Button = styled.button`
      background-color: transparent;
     font-size: 20px;
@@ -22,8 +21,6 @@ const Button = styled.button`
 
 const CardStyle = styled.div `
     
-    
-    /* align-items: */
     border: 2px;
     border-radius: 15px;
     text-align: center;
