@@ -10,21 +10,21 @@ function EditBirthdays () {
     const birthdaysList = [
         {
             id: 1,
-            birthdayDate: '2023-06-12',
+            birthdayDate: '06-12',
             name: 'John Doe',
             gifts: 'Banana',
             age: '40'
         },
         {
             id: 2,
-            birthdayDate: '2023-06-13',
+            birthdayDate: '06-13',
             name: 'Max Row',
             gifts: 'Peach',
             age: '30'
         },
         {
             id: 3,
-            birthdayDate: '2023-06-15',
+            birthdayDate: '06-15',
             name: 'Moe Foe',
             gifts: 'Watermelon',
             age:'50'

@@ -21,11 +21,11 @@ const BirthdayForm = ( {onNewTask} ) => {
         const currentYear = date.getFullYear()
         const birthdayDateYear = birthdayDate.toString().slice(0,4)
         const age = Number(currentYear) - Number(birthdayDateYear) + 1
-        
-
+        const birthdayDateMonthDay = birthdayDate.toString().slice(5)
+    
         const newBirthday = {
             id: uuid(), 
-            birthdayDate: birthdayDate,
+            birthdayDate: birthdayDateMonthDay,
             name: name,
             age: age,
             gifts: gifts,
@@ -46,7 +46,7 @@ const BirthdayForm = ( {onNewTask} ) => {
                 } onChange={nameInputHandler}/>
             </div>
             <div className='form-control'>
-                <label htmlFor='birthday-date'>Enter birthday:</label>
+                <label htmlFor='birthday-date'>Enter birthday date:</label>
                 <input type='date' id='birthday-date' name='birthday-date' value={birthdayDate} onChange={dateInputHandler}/>
             </div>
             <div className='form-control'>
