@@ -12,7 +12,7 @@ function EditBirthdays () {
             id: 1,
             birthdayDate: '2023-06-12',
             name: 'John Doe',
-            gifts: 'Watermelon',
+            gifts: 'Banana',
             age: '40'
         },
         {
@@ -26,7 +26,7 @@ function EditBirthdays () {
             id: 3,
             birthdayDate: '2023-06-15',
             name: 'Moe Foe',
-            gifts: 'banana',
+            gifts: 'Watermelon',
             age:'50'
         }
     ]
@@ -54,8 +54,6 @@ function EditBirthdays () {
             <h2>Upcomming birthdays:</h2>
 
             <BirthdayList data={birthdays} onBirthdayDelete={deleteBirthdayHandler}/>
-
-           
             
         </Container>
     )
